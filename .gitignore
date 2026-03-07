@@ -1,16 +1,37 @@
-# ── Datasets & raw data ──────────────────────────────────────────────────────
-alexj21/
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+.env/
+
+# ── Datasets & raw data ───────────────────────────────────────────────────────
 datasets/
 data/
+alexj21/
+
+# ── YOLO training outputs ─────────────────────────────────────────────────────
+runs/
+outputs/
+backend/models/
 
 # ── Model weights ─────────────────────────────────────────────────────────────
 *.pt
+*.weights
 *.onnx
 *.engine
 *.tflite
 *.torchscript
-pool-risk-ai/backend/models/
-pool-risk-ai/backend/runs/
 
 # ── Images & annotations ──────────────────────────────────────────────────────
 *.png
@@ -27,22 +48,15 @@ pool-risk-ai/backend/runs/
 *.tar.gz
 *.rar
 
-# ── Python ────────────────────────────────────────────────────────────────────
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.Python
-*.egg-info/
-dist/
-build/
-.eggs/
+# ── Logs & text artifacts ─────────────────────────────────────────────────────
+*.log
+*.cache
+*.txt
+!requirements.txt
 
-# ── Virtual environments ──────────────────────────────────────────────────────
-venv/
-.venv/
-env/
-.env/
+# ── ML experiment tracking ────────────────────────────────────────────────────
+wandb/
+mlruns/
 
 # ── Jupyter ───────────────────────────────────────────────────────────────────
 .ipynb_checkpoints/
@@ -51,19 +65,5 @@ env/
 # ── IDE / OS ──────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
-*.DS_Store
+.DS_Store
 Thumbs.db
-
-# ── Logs & caches ─────────────────────────────────────────────────────────────
-*.log
-*.cache
-wandb/
-mlruns/
-
-__pycache__/
-*.pyc
-*.pt
-runs/
-datasets/
-images/
-labels/
